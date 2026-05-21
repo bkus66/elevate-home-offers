@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60">
+  <rect width="240" height="60" fill="none"/>
+  <!-- House icon -->
+  <path d="M10 30 L20 20 L30 30 L30 42 L10 42 Z" fill="#0F2A47" stroke="#0F2A47" stroke-width="1"/>
+  <path d="M14 42 L14 34 L20 34 L20 42" fill="#C8A24B"/>
+  <path d="M22 28 L26 28 L26 33 L22 33 Z" fill="#C8A24B"/>
+  <!-- Text -->
+  <text x="38" y="26" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#0F2A47">ELEVATE</text>
+  <text x="38" y="43" font-family="Georgia, serif" font-size="12" fill="#0F2A47">HOME OFFERS</text>
+  <!-- Gold underline accent -->
+  <rect x="38" y="47" width="120" height="2" fill="#C8A24B"/>
+</svg>
