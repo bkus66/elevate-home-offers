@@ -60,3 +60,4 @@ HUBSPOT_API_KEY=your_hubspot_key
 /content/blog     # Blog post content (TypeScript objects)
 /public           # Static assets (logos, images)
 ```
+# elevate-home-offers
