@@ -5,7 +5,7 @@ export const siteConfig = {
   baseUrl: 'https://elevatehomeoffers.com',
   name: 'Elevate Home Offers',
   phone: '[PHONE]',
-  email: '[EMAIL]',
+  email: '',
   address: 'Austin, TX',
   twitterHandle: '@elevatehomeoffers',
 };

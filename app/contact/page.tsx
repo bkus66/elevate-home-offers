@@ -50,20 +50,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-primary mb-1">Email</h3>
-                    <a href={`mailto:${siteConfig.email}`} className="text-gray-600 hover:text-accent transition-colors text-lg font-medium">
-                      {siteConfig.email}
-                    </a>
-                    <p className="text-gray-400 text-sm mt-1">We respond within 1 business day</p>
-                  </div>
-                </div>
 
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center">
