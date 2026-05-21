@@ -4,7 +4,7 @@ import type { Location } from './locations';
 export const siteConfig = {
   baseUrl: 'https://elevatehomeoffers.com',
   name: 'Elevate Home Offers',
-  phone: '[PHONE]',
+  phone: '+1 512-580-9847',
   email: '',
   address: 'Austin, TX',
   twitterHandle: '@elevatehomeoffers',
