@@ -141,20 +141,33 @@ export default function LeadForm() {
     setLoading(true);
     setServerError('');
 
-    const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-    if (!formspreeId) {
-      setServerError('Form is not configured yet. Please call us directly.');
-      setLoading(false);
-      return;
-    }
-
     try {
-      const payload = { ...step1Data, ...result.data, source: 'website' };
-      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const payload = {
+        // GHL standard contact fields
+        firstName: result.data.fullName.split(' ')[0],
+        lastName: result.data.fullName.split(' ').slice(1).join(' ') || '',
+        phone: step1Data.phone,
+        email: step1Data.email,
+        // Property info
+        address: step1Data.address,
+        reason: result.data.reason,
+        timeline: result.data.timeline,
+        condition: result.data.condition,
+        contactMethod: result.data.contactMethod,
+        hasMortgage: result.data.hasMortgage,
+        bestTime: result.data.bestTime,
+        source: 'elevatehomeoffers.com',
+      };
+
+      const response = await fetch(
+        'https://services.leadconnectorhq.com/hooks/bOimkvcSbURq9hHfwqsk/webhook-trigger/10a78545-d337-4b44-b3af-eb060441a512',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }
+      );
+
       if (response.ok) {
         setSuccess(true);
       } else {
