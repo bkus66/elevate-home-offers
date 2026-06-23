@@ -1,9 +1,10 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
       "has": [{ "type": "host", "value": "offer.elevatehomeoffers.com" }],
-      "destination": "/sell-house-fast-austin/"
+      "destination": "/sell-house-fast-austin/",
+      "permanent": false
     }
   ]
 }
