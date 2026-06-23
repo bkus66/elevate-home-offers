@@ -123,24 +123,14 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Hero */}
-      <section className="relative py-12 lg:py-24 overflow-hidden">
-        {/* Responsive background image — eager + high priority for fast LCP */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/austin-skyline-lp-mobile.jpg"
-          srcSet="/austin-skyline-lp-mobile.jpg 900w, /austin-skyline-lp.jpg 1600w"
-          sizes="100vw"
-          alt=""
-          aria-hidden="true"
-          width={1600}
-          height={1000}
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-primary/85" />
-
+      {/* Hero — CSS gradient (no image) for fastest LCP/FCP */}
+      <section
+        className="relative py-12 lg:py-24 overflow-hidden bg-primary"
+        style={{
+          backgroundImage:
+            'radial-gradient(90% 120% at 85% 0%, rgba(200,162,75,0.14) 0%, rgba(15,42,71,0) 55%), linear-gradient(160deg, #16395b 0%, #0F2A47 45%, #0a1d31 100%)',
+        }}
+      >
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
             {/* Left — headline + trust */}
