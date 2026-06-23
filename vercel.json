@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "offer.elevatehomeoffers.com" }],
+      "destination": "/sell-house-fast-austin/"
+    }
+  ]
+}
