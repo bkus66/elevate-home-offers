@@ -210,8 +210,8 @@ export default function LeadForm() {
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-      <h3 className="text-xl font-bold text-primary mb-1">Get Your Free Cash Offer</h3>
-      <p className="text-gray-500 text-sm mb-5">No obligation. No fees. Close in as little as 7 days.</p>
+      <h3 className="text-xl font-bold text-primary mb-1">Get Your Free Cash Offer Today</h3>
+      <p className="text-gray-500 text-sm mb-5">Tell us about your property and we&apos;ll send you a fair, no-obligation offer within 24 hours.</p>
 
       <ProgressBar step={step} />
 

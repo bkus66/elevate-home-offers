@@ -131,38 +131,21 @@ export default function HomePage() {
         city="Austin"
       />
 
-      {/* Social Proof Bar */}
-      <div className="bg-primary py-4 border-t border-blue-800">
+      {/* Stats Bar */}
+      <div className="bg-white border-b border-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10">
-            <div className="flex items-center gap-2">
-              <div className="flex text-accent">
-                {[1, 2, 3, 4, 5].map((s) => (
-                  <svg key={s} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {[
+              { value: '$0', label: 'Fees & Commissions' },
+              { value: 'As-Is', label: 'Any Condition' },
+              { value: 'Local', label: 'Austin-Based Team' },
+              { value: 'Flexible', label: 'Closing Timeline' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+                <div className="text-sm text-gray-500">{stat.label}</div>
               </div>
-              <span className="text-white text-sm font-medium">5-Star Rated on Google</span>
-            </div>
-            <div className="flex items-center gap-2 text-white text-sm">
-              <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              <span>100+ Homes Purchased</span>
-            </div>
-            <div className="flex items-center gap-2 text-white text-sm">
-              <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>5+ Years in Business</span>
-            </div>
-            <div className="flex items-center gap-2 text-white text-sm">
-              <svg className="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-              </svg>
-              <span>Locally Owned &amp; Operated</span>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -233,15 +216,35 @@ export default function HomePage() {
       <AreasServed />
       <FAQ items={homepageFAQ} />
 
-      {/* Final CTA */}
-      <section className="py-16 lg:py-24 bg-primary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* CTA Banner — matches Nashville's style */}
+      <section className="bg-primary py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+                Ready to Sell Your Austin Home?
+              </h2>
+              <p className="text-gray-300 mt-1 text-sm">No showings. No open houses. No waiting for buyers.</p>
+            </div>
+            <Link
+              href="/get-cash-offer"
+              className="flex-shrink-0 inline-flex items-center gap-2 bg-accent hover:bg-amber-500 text-primary font-bold px-8 py-3 rounded-xl transition-colors text-base"
+            >
+              Get Your Cash Offer →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA with Form */}
+      <section className="py-16 lg:py-24 bg-neutral">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
               Get Your Free Cash Offer Today
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Join hundreds of Austin-area homeowners who have experienced the Elevate difference. No obligation, no pressure, and no fees — ever.
+            <p className="text-gray-600 text-lg max-w-xl mx-auto">
+              Join hundreds of Austin-area homeowners who have sold with Elevate. No obligation, no pressure, no fees — ever.
             </p>
           </div>
           <LeadForm />
